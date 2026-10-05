@@ -1,5 +1,5 @@
 /* ==========================================================
-   FULUS BOX — Mohamed & Marmora's money diary
+   FLOOWS BOX — Mohamed & Marmora's money diary
    Plain JavaScript, no server. Data lives in this browser
    (localStorage). Use More → Backup to move it between phones.
    ========================================================== */
@@ -55,68 +55,71 @@ const PAY_METHODS = [
 const REACTIONS = ['😍', '😂', '😱', '🤨', '💸', '👏'];
 
 /* ---------------- JOKES & ADVICE ---------------- */
+/* Team Marmora 👑 — every joke is on her side */
 const JOKES = [
-  "A “sale” is when Marmora saves 300 EGP by spending 2,700. 🛍️",
-  "“I'm just looking” — Marmora, five minutes before buying three things.",
-  "Behind every successful man is a woman… holding four shopping bags.",
-  "Marmora's closet: completely full. Marmora: “I have NOTHING to wear.” 👗",
-  "Mohamed's wallet has entered witness protection. 🕶️",
-  "Talabat knows Marmora's address better than the postman does. 🛵",
-  "Husband math: 1 shirt = 200 EGP. Wife math: 1 shirt = 200 EGP + shoes + bag + “it would be a waste not to”.",
-  "Marmora doesn't overspend. She invests in happiness — the bank just doesn't accept that currency yet.",
-  "Mohamed: “Is that new?” Marmora: “This old thing?” The price tag: still attached. 🏷️",
-  "Marriage tip: never ask “How much was it?” Ask “Was it on sale?” — safer for everyone.",
+  "A “sale” is when Marmora saves 300 EGP. Mohamed calls it “spending 2,700”. Clearly only one of them understands economics. 🛍️",
+  "Marmora doesn't overspend — she invests in happiness. Mohamed's PlayStation is the real expense. 🎮",
+  "Behind every successful man is a woman who picked his shirts. You're welcome, Mohamed. 👔",
+  "Marmora's closet is full because she plans ahead. Mohamed has worn the same three T-shirts since 2019. 👕",
+  "Mohamed: “Did you buy something new?” Marmora: “Yes. It looks amazing. Next question.” 💅",
+  "Rule #1 of marriage: Marmora is always right. Rule #2: if she's wrong, see rule #1. 👑",
+  "Mohamed complains about one dress, then spends 600 EGP at the ahwa watching a match. ☕⚽",
   "Mohamed swears he never overspends. His four phone chargers and “just in case” cables disagree. 🔌",
-  "The two scariest words for an Egyptian husband: “free shipping”.",
-  "Ahwa again, Mohamed? The waiter knows your order, your shisha flavour and your salary. ☕",
-  "City Centre Alex called — they want to name a parking spot after Marmora.",
-  "In Alex the sea goes out with the tide. Mohamed's salary goes out with Marmora. 🌊",
-  "Marmora says she's on a budget. The budget says they've never met.",
-  "“Happy wife, happy life.” Also: “empty wallet, quiet husband.” 🤐",
+  "Marmora bought two pairs of shoes on sale, so technically she made money. Mohamed's maths teacher has been informed. 🧮",
   "Mohamed: “We need to save money.” Marmora: “Agreed. Let's start with your PlayStation.” 🎮",
-  "One “quick” coffee in Alex now costs 85 EGP. Coffee is the new gold. ☕✨",
-  "Fish at the Corniche is worth every pound. The bill, though, needs a lifeguard. 🐟",
-  "Egyptian rule: a “quick visit” to the in-laws costs two kilos of fruit and one kilo of patience. 🍊",
-  "Mohamed earns money like a tram. Marmora spends it like a microbus on the Corniche. 🚌💨",
-  "Marmora's favourite cardio? Running up the card. 💳",
-  "Baby Adel isn't here yet and already has a bigger wardrobe than Mohamed. 👶",
-  "Shopping list: bread, milk, eggs. Marmora's receipt: bread, milk, eggs, candle, scarf, mug that says “Queen”.",
-  "Marmora: “It was only 50 pounds!” Times twelve. Every week. 🧮",
-  "Mohamed hid money in his jacket for an emergency. Marmora found it. It was an emergency. 💅",
-  "Marriage is sharing everything: the bed, the dreams, and especially the Netflix password.",
-  "Every month Marmora and Mohamed agree on a budget. Every month the budget files for divorce.",
-  "“Let's just window-shop.” — famous last words in Egyptian marriage history. 🪟"
+  "Talabat knows Mohamed's order by heart: “the usual, extra tahina, don't tell Marmora.” 🛵",
+  "Marmora: “It was only 50 pounds!” Mohamed: “50 pounds?!” Also Mohamed: buys a 500 EGP car air freshener. 🚗",
+  "City Centre Alex should give Marmora a VIP card. She's personally keeping the Egyptian economy alive. 🇪🇬",
+  "When Marmora says “I have nothing to wear”, it's a fashion statement. When Mohamed says it, it's just true. 😂",
+  "Mohamed hid money in his jacket. Marmora found it. Finders keepers — it's in the marriage contract. 💍",
+  "Mohamed's “quick” coffee costs 85 EGP a day. Marmora's lipstick lasts a whole month. Do the maths, ya Basha. 💄",
+  "Baby Adel isn't here yet and already has better taste than his dad — thanks to Mom. 👶",
+  "Marriage is sharing everything: the bed, the dreams, and Marmora's right to Mohamed's fries. 🍟",
+  "Every month they agree on a budget. Every month Mohamed's “one last cable” breaks it. 🔌",
+  "“Let's just window-shop.” — Marmora's polite way of saying “bring your wallet, habibi”. 🪟",
+  "Mohamed thinks shopping is expensive. Wait until he finds out the price of an unhappy wife. 👑",
+  "Mohamed earns the money, Marmora manages it like a CEO. Respect the CEO. 💼",
+  "Egyptian rule: a “quick visit” to Mohamed's family costs two kilos of fruit and all of Marmora's patience. 🍊",
+  "Fish on the Corniche: Mohamed orders for four, eats for six, then asks Marmora why the bill is so high. 🐟",
+  "Marmora's shopping is “too much”. Mohamed's gadgets are “investments”. Funny how that works. 📱",
+  "Shopping list: bread, milk, eggs. Marmora added a candle because the home deserves to smell nice. Mohamed added… another cable. 🕯️",
+  "Mohamed says Marmora spends a lot. Mohamed has never checked the ahwa bill. 🧾",
+  "A happy Marmora = a happy home = a happy Mohamed. That's not spending, that's the smartest investment in Alexandria. 📈",
+  "Marmora doesn't need a budget app. Mohamed does. That's why this app exists. 😌",
+  "Girls don't overspend. They just discover great deals before husbands do. 🛍️✨"
 ];
 
 const ADVICE = [
-  { ar: 'على قد لحافك مد رجليك', en: "Stretch your legs only as far as your blanket. (And no, Marmora, a new blanket from the sale doesn't count.)" },
+  { ar: 'على قد لحافك مد رجليك', en: "Stretch your legs only as far as your blanket. (Mohamed, this includes gadgets and cables.) 🔌" },
   { ar: 'القرش الأبيض ينفع في اليوم الأسود', en: "The white piastre saves the black day. Hide some cash in the freezer like Teta did. 🧊" },
   { ar: 'قاعدة الـ ٢٤ ساعة', en: "Leave it in the cart for 24 hours. Still love it tomorrow? It's love. If not — it was just Instagram." },
   { ar: 'الجمعية', en: "Join a gam3eya — Egypt's original savings app. No Wi-Fi, no fees, just Tant Samira collecting every 1st. 🐷" },
   { ar: 'ادفع لنفسك الأول', en: "Pay yourselves first: move 10% to savings on payday — before Talabat finds out you got paid." },
-  { ar: 'الأكل في البيت', en: "Cook at home three extra nights a week = a free fish dinner on the Corniche at month end. 🐟" },
+  { ar: 'الأكل في البيت', en: "Cook at home three extra nights a week = a free fish dinner on the Corniche at month end. (Mohamed is on dishes.) 🐟" },
   { ar: 'الظرف', en: "Envelope trick: put the week's outings money in an envelope. When it's empty, the Corniche walk is still free. 🌅" },
   { ar: 'اجتماع الجمعة', en: "Friday money date: 10 minutes, one tea, zero blaming. Review the week together. 🫖" },
-  { ar: 'ألغي الاشتراك', en: "Unsubscribe from shop newsletters. What Marmora doesn't see, the wallet doesn't pay. 📧" },
+  { ar: 'ألغي الاشتراك', en: "Unsubscribe from gadget newsletters, Mohamed. What you don't see, you don't buy. 📧" },
   { ar: 'احسبها بساعات الشغل', en: "Before a big buy, convert it into hours of work. Still worth it? Then enjoy it, guilt-free." },
   { ar: 'مشوار واحد', en: "One planned trip beats five “quick” trips. Benzine and Uber both agree. ⛽" },
-  { ar: 'فاصل يا باشا', en: "Bargain politely — in Egypt the first price is just the opening line of a long conversation. 🤝" }
+  { ar: 'فاصل يا باشا', en: "Bargain politely — in Egypt the first price is just the opening line. Let Marmora do the talking, she's better at it. 🤝" }
 ];
 
 const CAT_TOASTS = {
-  clothes:   { marwa: "Another outfit? The closet just filed a complaint. 🧥", mohamed: "Mohamed bought clothes?! Screenshot this, it's historic. 📸" },
-  beauty:    { marwa: "Beauty is priceless… apparently it's this price exactly. 💅", mohamed: "A barber visit! Looking like a 1960s film star, ya Basha. 💈" },
-  cafe:      { marwa: "Coffee date? Hope the view of the sea was included. ☕", mohamed: "Ahwa again? The waiter is planning to invite you to his wedding. ☕" },
-  delivery:  { marwa: "Talabat sends its love. And a loyalty card. 🛵", mohamed: "Delivery again… the kitchen is starting to feel lonely. 🍳" },
-  baby:      { marwa: "Spending on Baby Adel = investment. Approved by the Ministry of Dads. 👶", mohamed: "Baby Adel thanks you. Future pocket money, noted. 👶" },
-  fish:      { marwa: "Alex rule: you can't say no to fresh fish. Approved. 🐟", mohamed: "Fish in Alex is a human right. Approved. 🐟" },
-  groceries: { marwa: "Groceries: the only shopping Mohamed never complains about. 🛒", mohamed: "Groceries done like a responsible husband. Marmora is impressed (maybe). 🛒" },
-  transport: { marwa: "Uber surge pricing strikes again. 🚕", mohamed: "Another ride? The microbus misses you. 🚐" },
-  bills:     { marwa: "Bills: adulthood's monthly subscription. 💡", mohamed: "Bills paid. The lights stay on — and so does the marriage. 💡" },
-  gam3eya:   { marwa: "Gam3eya paid! Future Marmora says shokran. 🐷", mohamed: "Gam3eya paid! Future Mohamed says shokran. 🐷" },
+  clothes:   { marwa: "New outfit? Queen behaviour. The closet will make space. 👗", mohamed: "Mohamed bought clothes?! Finally — Marmora has been asking since 2024. 📸" },
+  beauty:    { marwa: "Beauty isn't an expense, it's maintaining a national treasure. 💅", mohamed: "A barber visit! Marmora approves (finally). 💈" },
+  cafe:      { marwa: "A coffee for the queen. Totally deserved. ☕", mohamed: "Ahwa again? The waiter is planning to invite you to his wedding. ☕" },
+  delivery:  { marwa: "Even queens deserve a night off from the kitchen. Approved. 🛵", mohamed: "Delivery again, ya Basha? The kitchen is right there… 🍳" },
+  baby:      { marwa: "Spending on Baby Adel = investment. Mom always knows best. 👶", mohamed: "Baby Adel thanks you. Future pocket money, noted. 👶" },
+  fish:      { marwa: "Alex rule: you can't say no to fresh fish. Approved. 🐟", mohamed: "Fish in Alex is a human right. Did you leave some for Marmora? 🐟" },
+  groceries: { marwa: "Groceries handled by the real Minister of the Household. 🛒", mohamed: "Groceries! Did you follow Marmora's list, or freestyle again? 🛒" },
+  transport: { marwa: "Queens don't squeeze into microbuses. Uber approved. 🚕", mohamed: "Another ride? The microbus misses you. 🚐" },
+  bills:     { marwa: "Bills paid by the family's Finance Minister. 💡", mohamed: "Bills paid. The lights stay on — and so does the marriage. 💡" },
+  gam3eya:   { marwa: "Gam3eya paid! Marmora is officially the smartest saver in Alex. 🐷", mohamed: "Gam3eya paid! Marmora's good influence is working. 🐷" },
   charity:   { marwa: "Sadaqa never decreases wealth. Beautiful. 🤍", mohamed: "Sadaqa never decreases wealth. Beautiful. 🤍" },
-  outings:   { marwa: "Corniche vibes are expensive but the sunset is free. 🌅", mohamed: "Good husband points +10 for taking her out. 🌅" },
-  family:    { marwa: "Visiting family with fruit — a true Egyptian. 🍊", mohamed: "The in-law tax has been paid. Respect. 🍊" }
+  outings:   { marwa: "Corniche time! Every queen needs a sea breeze. 🌅", mohamed: "Good husband points +10 for taking her out. 🌅" },
+  family:    { marwa: "Visiting family with gifts — classy as always. 🎁", mohamed: "Visiting family with fruit — Marmora taught you well. 🍊" },
+  fuel:      { marwa: "Benzine for the queen's carriage. ⛽", mohamed: "Benzine again? Maybe stop driving to the ahwa. ⛽" },
+  subs:      { marwa: "Netflix & Shahid: essential for the home's morale. 📺", mohamed: "Another subscription? Marmora's shows were already enough. 📺" }
 };
 
 /* ---------------- STORAGE ---------------- */
@@ -126,8 +129,15 @@ const WHO_KEY = 'fulusbox.who';
 function store(k, v) { try { localStorage.setItem(k, v); return true; } catch (e) { return false; } }
 function load(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
 
+/* "3abelo w Adeloo" one-tap expenses. Amounts are starting guesses — edit them in the app. */
+const DEFAULT_TEMPLATES = [
+  { id: 't_nescafe', name: 'Adel monthly Nescafe',       amount: 350,  cat: 'groceries', emoji: '☕' },
+  { id: 't_la7ma',   name: 'Monthly la7ma from Tal5awy', amount: 2500, cat: 'market',    emoji: '🥩' },
+  { id: 't_chicken', name: 'Monthly chicken extra',      amount: 900,  cat: 'market',    emoji: '🍗' }
+];
+
 function freshState() {
-  return { v: 1, entries: [], cats: DEFAULT_CATS.map(c => ({ ...c })), months: {} };
+  return { v: 1, entries: [], cats: DEFAULT_CATS.map(c => ({ ...c })), months: {}, templates: DEFAULT_TEMPLATES.map(t => ({ ...t, updated: 0 })) };
 }
 
 let state = (() => {
@@ -137,6 +147,7 @@ let state = (() => {
       // add any new default categories shipped in later versions
       DEFAULT_CATS.forEach(d => { if (!s.cats.find(c => c.id === d.id)) s.cats.push({ ...d }); });
       s.months = s.months || {};
+      if (!Array.isArray(s.templates)) s.templates = DEFAULT_TEMPLATES.map(t => ({ ...t, updated: 0 }));
       return s;
     }
   } catch (e) { /* ignore */ }
@@ -398,9 +409,9 @@ function renderHome() {
 
 function duelLine(mo, ma) {
   if (!mo && !ma) return 'Nobody has spent anything this month (on this phone). A miracle! 🙏';
-  if (ma > mo * 1.5) return `Marmora is leading by ${money(ma - mo)}. Mohamed is checking the bank app with one eye closed. 🙈`;
-  if (mo > ma * 1.5) return `Mohamed is leading by ${money(mo - ma)}! Marmora is preparing a speech. 🎤`;
-  return `Neck and neck — ${money(mo)} vs ${money(ma)}. A truly balanced marriage. ⚖️`;
+  if (ma > mo * 1.5) return `Marmora is ahead by ${money(ma - mo)} — investing in the family's happiness. Mohamed, say thank you. 💐`;
+  if (mo > ma * 1.5) return `Mohamed is ahead by ${money(mo - ma)}! And HE says Marmora spends a lot? 🤔`;
+  return `Neck and neck — ${money(mo)} vs ${money(ma)}. Marmora still wins on style. 👑`;
 }
 
 /* ================= ADD ================= */
@@ -458,10 +469,10 @@ function submitForm(ev) {
   const when = $('#fWhen').value;
   const err = msg => { $('#formError').textContent = msg; };
 
-  if (!(amount > 0)) return err('Type an amount first — even Marmora\'s shopping isn\'t free. 😉');
+  if (!(amount > 0)) return err('Type an amount first, ya habibi. 😉');
   if (amount > 10000000) return err('That number is bigger than the Alexandria port budget. Check it again.');
   if (!when || when.length < 16) return err('Pick a date and time.');
-  if (when.slice(0, 7) < START_YM) return err('Fulus Box starts on 1 October 2026 — pick a later date.');
+  if (when.slice(0, 7) < START_YM) return err('Floows Box starts on 1 October 2026 — pick a later date.');
   if (when > localInput(new Date(Date.now() + 5 * 60000))) return err('That\'s in the future! Time travel costs extra. ⏳');
   if (!ui.form.cat) return err('Choose a category.');
 
@@ -481,6 +492,7 @@ function submitForm(ev) {
   save();
 
   const wasEdit = !!ui.editingId;
+  kaChing();
   coinRain();
   toast(wasEdit ? 'Updated ✔' : `Saved ${money(amount)}`, wasEdit ? 'All fixed, ya ' + (who === 'marwa' ? 'Hanem.' : 'Basha.') : saveMessage(entry));
   resetForm();
@@ -492,9 +504,9 @@ function saveMessage(e) {
   const budgets = budgetsFor(ym, who);
   if (budgets[e.cat]) {
     const spent = sum(filterEntries({ scope: who, ym }).filter(x => x.cat === e.cat));
-    if (spent > budgets[e.cat]) return `🚨 ${catById(e.cat).name} is over budget by ${money(spent - budgets[e.cat])}. ${who === 'marwa' ? 'Mohamed has been notified… emotionally.' : 'Marmora will hear about this.'}`;
+    if (spent > budgets[e.cat]) return `🚨 ${catById(e.cat).name} is over budget by ${money(spent - budgets[e.cat])}. ${who === 'marwa' ? 'Relax, Marmora — budgets are just suggestions for queens. 😉' : 'Marmora will hear about this. 👀'}`;
   }
-  if (e.amount >= BIG_SPEND) return who === 'marwa' ? 'Whoa! 💸 Mohamed, please sit down before reading this.' : 'Big spender alert! Marmora is taking notes. 📝';
+  if (e.amount >= BIG_SPEND) return who === 'marwa' ? 'A big one! 💸 Mohamed, deep breath — she\'s worth every pound. 👑' : 'Big spender alert! And he says Marmora spends a lot? 📝';
   const t = CAT_TOASTS[e.cat];
   return t ? t[who] : pick(JOKES);
 }
@@ -679,26 +691,144 @@ function verdict(catId, scope, total, budgets) {
   const c = catById(catId);
   const name = scope === 'ours' ? 'The couple' : PEOPLE[scope].name;
   const lines = {
-    clothes: `${name}'s #1 expense is clothes. The wardrobe is now legally a second apartment. 👗`,
-    beauty: `Beauty & coiffeur wins! ${name} is glowing — the wallet, less so. 💅`,
-    delivery: `Talabat is winning. The stove has been reported missing. 🛵`,
-    cafe: `Ahwa & cafés on top. Coffee is basically a family member now. ☕`,
+    clothes: `Clothes on top — someone in this house has style. (Hint: it's not Mohamed.) 👗`,
+    beauty: `Beauty & coiffeur wins! Glowing — and worth every single pound. 💅`,
+    delivery: `Talabat is winning. Mohamed, maybe it's time you learned to cook? 🛵`,
+    cafe: `Ahwa & cafés on top. Mohamed, we all know this is you. ☕`,
     groceries: `The supermarket wins — a responsible household. Teta would be proud. 🛒`,
     market: `Veg & meat lead the list. Healthy wallet? No. Healthy family? Yes. 🥬`,
     fish: `Fish on top! The most Alexandrian result possible. 🐟🌊`,
     rent: `Rent leads — normal. The bawab says thank you. 🏠`,
     baby: `Baby Adel is already the biggest spender in the family. Classic. 👶`,
     transport: `Transport wins. Maybe it's time to befriend the tram again. 🚋`,
-    fuel: `Benzine wins. The car is eating better than you. ⛽`,
     outings: `Outings on top — living the Corniche dream. Just not every day. 🌅`,
     occasions: `Occasions season! Weddings and Eid don't pay for themselves. 🌙`,
     family: `Family & gifts on top — generous hearts, light wallets. 🎁`,
-    restaurants: `Restaurants lead. Chef Marmora and Chef Mohamed are on strike? 🍽️`,
+    restaurants: `Restaurants lead. Even queens deserve a night off cooking. 🍽️`,
+    fuel: `Benzine wins. Mohamed, the ahwa is walkable. ⛽`,
     gam3eya: `Savings are the biggest category — whoever did this deserves a medal. 🏅`
   };
   const overCats = Object.keys(budgets).filter(id => sum(filterEntries({ scope, ym: ui.stats.ym }).filter(e => e.cat === id)) > budgets[id]);
   if (overCats.length) return `${lines[catId] || ''} Also: ${overCats.map(id => catById(id).name).join(', ')} went over budget. 🚨 Emergency family meeting with tea.`.trim();
   return lines[catId] || `${c.emoji} ${c.name} took the biggest bite this time. Keep an eye on it next week!`;
+}
+
+/* ================= 3ABELO W ADELOO (one-tap expenses) ================= */
+const quickUi = { editing: false };
+
+function renderQuick() {
+  const curYM = ymOf(new Date());
+  const tpls = state.templates.filter(t => !t.deleted);
+  const tile = t => {
+    const c = catById(t.cat);
+    const done = alive().filter(e => e.tpl === t.id && e.when.slice(0, 7) === curYM).sort((a, b) => a.when.localeCompare(b.when));
+    const last = done[done.length - 1];
+    const badge = last
+      ? `<span class="qt-badge">✓ ${done.length > 1 ? done.length + '× · ' : ''}${prettyDay(last.when.slice(0, 10)).toLowerCase()} · ${PEOPLE[last.who].name}</span>`
+      : `<span class="qt-badge qt-badge--todo">Not added this month</span>`;
+    return `<button type="button" class="quick-tile ${last ? 'is-done' : ''}" data-tpl="${t.id}">
+      ${quickUi.editing ? '<span class="qt-edit">✏️ edit</span>' : ''}
+      <span class="qt-emo">${esc(t.emoji || c.emoji)}</span>
+      <span class="qt-name">${esc(t.name)}</span>
+      <span class="qt-amt">${money(t.amount)}</span>
+      <span class="qt-cat">${c.emoji} ${esc(c.name)}</span>
+      ${badge}
+    </button>`;
+  };
+
+  $('#v-quick').innerHTML = `
+    <h2 class="sec-title">3abelo w Adeloo<small>ONE TAP = ONE EXPENSE</small></h2>
+    <p class="quick-hint">${quickUi.editing
+      ? '✏️ Edit mode — tap a card to change its name, amount or category.'
+      : `Tap a card and it's saved instantly as <b>${PEOPLE[who].name}</b>, dated <b>right now</b>. Wrong tap? Hit <b>Undo</b>.`}</p>
+    <div class="quick-grid">
+      ${tpls.map(tile).join('')}
+      <button type="button" class="quick-tile quick-tile--new" id="tplNew"><span class="qt-emo">➕</span><span class="qt-name">New quick expense</span></button>
+    </div>
+    <button type="button" class="btn ${quickUi.editing ? 'btn-red' : 'btn-ghost'} btn-block" id="quickEditBtn">${quickUi.editing ? '✔ Done editing' : '✏️ Edit the list'}</button>`;
+
+  $$('#v-quick [data-tpl]').forEach(b => b.onclick = () => (quickUi.editing ? openTemplate(b.dataset.tpl) : quickAdd(b.dataset.tpl)));
+  $('#tplNew').onclick = () => openTemplate(null);
+  $('#quickEditBtn').onclick = () => { quickUi.editing = !quickUi.editing; renderQuick(); };
+}
+
+function quickAdd(id) {
+  const t = state.templates.find(x => x.id === id && !x.deleted);
+  if (!t) return;
+  const when = localInput(new Date());
+  if (when.slice(0, 7) < START_YM) return toast('Too early', 'Floows Box starts on 1 October 2026.');
+  const before = alive().filter(e => e.tpl === id && e.when.slice(0, 7) === when.slice(0, 7));
+  if (before.length && !confirm(`${t.name} was already added this month. Add it again?`)) return;
+
+  const now = Date.now();
+  const entry = { id: uid(), who, amount: t.amount, when, cat: t.cat, pay: t.pay || 'cash', note: t.name, tpl: id, created: now, updated: now, reactions: {} };
+  state.entries.push(entry);
+  const cfg = monthCfg(when.slice(0, 7));
+  if (!cfg.cats.includes(t.cat)) cfg.cats.push(t.cat);
+  save();
+  kaChing();
+  coinRain();
+  renderQuick();
+  toast(`Saved ${money(t.amount)}`, `${t.emoji || ''} ${t.name} — ${saveMessage(entry)}`, {
+    label: '↩ Undo',
+    fn: () => {
+      entry.deleted = true; entry.updated = Date.now(); save(); render();
+      toast('Undone', 'Like it never happened. 🤫');
+    }
+  });
+}
+
+function openTemplate(id) {
+  const t = id ? state.templates.find(x => x.id === id) : null;
+  const catIds = [...monthCfg(defaultYM()).cats];
+  if (t && !catIds.includes(t.cat)) catIds.push(t.cat);
+  const sel = t ? t.cat : 'groceries';
+  openSheet(`
+    <h3 class="card-title">${t ? 'Edit quick expense' : 'New quick expense'}</h3>
+    <form id="tplForm" class="form" autocomplete="off" novalidate>
+      <label class="lbl" for="tName">NAME</label>
+      <input class="input" id="tName" maxlength="40" placeholder="e.g. Monthly rice & oil" value="${t ? esc(t.name) : ''}">
+      <label class="lbl" for="tAmount">AMOUNT (${CURRENCY})</label>
+      <input class="input" id="tAmount" type="text" inputmode="decimal" placeholder="0" value="${t ? t.amount : ''}">
+      <label class="lbl" for="tCat">CATEGORY</label>
+      <select class="select" id="tCat" style="width:100%">
+        ${catIds.map(cid => { const c = catById(cid); return `<option value="${cid}" ${cid === sel ? 'selected' : ''}>${c.emoji} ${esc(c.name)}</option>`; }).join('')}
+      </select>
+      <label class="lbl" for="tEmoji">EMOJI <span class="lbl-hint">(optional)</span></label>
+      <input class="input" id="tEmoji" maxlength="4" placeholder="🍚" value="${t ? esc(t.emoji || '') : ''}">
+      <label class="lbl">PAID WITH</label>
+      <div class="chip-row" id="tPay">${PAY_METHODS.map(p => `<button type="button" class="chip ${((t && t.pay) || 'cash') === p.id ? 'on' : ''}" data-tpay="${p.id}">${p.label}</button>`).join('')}</div>
+      <p class="form-error" id="tErr" role="alert"></p>
+      <div class="form-actions">
+        ${t ? '<button type="button" class="btn btn-ghost" id="tDel">🗑 Delete</button>' : ''}
+        <button type="submit" class="btn btn-big">💾 Save</button>
+      </div>
+    </form>`);
+
+  let pay = (t && t.pay) || 'cash';
+  $('#tPay').onclick = ev => {
+    const b = ev.target.closest('[data-tpay]'); if (!b) return;
+    pay = b.dataset.tpay;
+    $$('#tPay .chip').forEach(x => x.classList.toggle('on', x === b));
+  };
+  $('#tplForm').onsubmit = ev => {
+    ev.preventDefault();
+    const name = $('#tName').value.trim();
+    const amount = parseAmount($('#tAmount').value);
+    if (!name) return ($('#tErr').textContent = 'Give it a name.');
+    if (!(amount > 0)) return ($('#tErr').textContent = 'Type the amount.');
+    const data = { name, amount, cat: $('#tCat').value, emoji: $('#tEmoji').value.trim(), pay, updated: Date.now() };
+    if (t) Object.assign(t, data);
+    else state.templates.push({ id: 't_' + uid(), ...data });
+    save(); closeSheet(); renderQuick();
+    toast('Saved ✔', `${data.emoji || catById(data.cat).emoji} ${name} is ready for one-tap.`);
+  };
+  const del = $('#tDel');
+  if (del) del.onclick = () => {
+    if (!confirm(`Remove “${t.name}” from 3abelo w Adeloo? (Past expenses stay.)`)) return;
+    t.deleted = true; t.updated = Date.now();
+    save(); closeSheet(); renderQuick();
+  };
 }
 
 /* ================= MORE ================= */
@@ -717,6 +847,7 @@ function renderMore() {
       <h3 class="card-title">Signed in as ${me.emoji} ${me.name}</h3>
       <p class="small muted" style="margin:0 0 12px">Each person has their own history on this phone. Switch any time.</p>
       <button class="btn btn-red btn-block" type="button" id="switchWho">🔄 Switch to ${PEOPLE[partnerOf(who)].name}</button>
+      <button class="btn btn-ghost btn-block" type="button" id="soundBtn" style="margin-top:10px">${soundOn ? '🔊 Ka-ching sound: ON' : '🔇 Ka-ching sound: OFF'}</button>
     </div>
 
     <div class="card">
@@ -776,6 +907,12 @@ function renderMore() {
 
   $('#moreMonth').onchange = ev => { m.ym = ev.target.value; renderMore(); };
   $('#switchWho').onclick = () => setWho(partnerOf(who));
+  $('#soundBtn').onclick = () => {
+    soundOn = !soundOn;
+    store(SOUND_KEY, soundOn ? 'on' : 'off');
+    renderMore();
+    kaChing();
+  };
   $$('[data-budget]').forEach(inp => inp.addEventListener('change', () => {
     const v = parseAmount(inp.value);
     if (v > 0) myB[inp.dataset.budget] = v; else delete myB[inp.dataset.budget];
@@ -806,12 +943,12 @@ function renderMore() {
 /* ---------------- BACKUP ---------------- */
 async function exportData() {
   const payload = JSON.stringify({ app: 'fulusbox', v: 1, by: who, exported: new Date().toISOString(), data: state });
-  const name = `fulus-box-${PEOPLE[who].name.toLowerCase()}-${todayStr()}.json`;
+  const name = `floows-box-${PEOPLE[who].name.toLowerCase()}-${todayStr()}.json`;
   const blob = new Blob([payload], { type: 'application/json' });
   try {
     const file = new File([blob], name, { type: 'application/json' });
     if (navigator.canShare && navigator.canShare({ files: [file] })) {
-      await navigator.share({ files: [file], title: 'Fulus Box backup' });
+      await navigator.share({ files: [file], title: 'Floows Box backup' });
       return;
     }
   } catch (e) { if (e && e.name === 'AbortError') return; }
@@ -839,6 +976,12 @@ function importData(ev) {
         if (!mine) { state.entries.push(e); added++; }
         else if ((e.updated || 0) > (mine.updated || 0)) { Object.assign(mine, e); updated++; }
       });
+      (inc.templates || []).forEach(t => {
+        if (!t || !t.id) return;
+        const local = state.templates.find(x => x.id === t.id);
+        if (!local) state.templates.push(t);
+        else if ((t.updated || 0) > (local.updated || 0)) Object.assign(local, t);
+      });
       (inc.cats || []).forEach(c => { if (c && c.id && !state.cats.find(x => x.id === c.id)) state.cats.push(c); });
       Object.entries(inc.months || {}).forEach(([ym, m]) => {
         const local = state.months[ym];
@@ -850,7 +993,7 @@ function importData(ev) {
       toast('Import done 🎉', `${added} new, ${updated} updated. Check “Ours 💞” in Analysis.`);
       render();
     } catch (e) {
-      toast('Oops', 'That file is not a Fulus Box backup.');
+      toast('Oops', 'That file is not a Floows Box backup.');
     }
   };
   r.readAsText(file);
@@ -927,14 +1070,60 @@ function closeSheet() {
 
 /* ---------------- TOAST & COINS ---------------- */
 let toastTimer;
-function toast(title, msg) {
+function toast(title, msg, action) {
   const t = $('#toast');
-  t.innerHTML = `<b>${esc(title)}</b>${esc(msg)}`;
+  t.innerHTML = `<b>${esc(title)}</b>${esc(msg)}${action ? `<button type="button" class="toast-action">${esc(action.label)}</button>` : ''}`;
+  if (action) t.querySelector('.toast-action').onclick = () => { t.hidden = true; action.fn(); };
   t.hidden = false;
   t.style.animation = 'none'; void t.offsetWidth; t.style.animation = '';
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => { t.hidden = true; }, 4200);
+  toastTimer = setTimeout(() => { t.hidden = true; }, action ? 6000 : 4200);
 }
+/* "Ka-ching!" cash-register sound, generated live (no audio file needed) */
+const SOUND_KEY = 'fulusbox.sound';
+let soundOn = load(SOUND_KEY) !== 'off';
+let audioCtx = null;
+function kaChing() {
+  if (!soundOn) return;
+  try {
+    audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    const ac = audioCtx, t0 = ac.currentTime + 0.02;
+    const out = ac.createGain();
+    out.gain.value = 0.55;
+    out.connect(ac.destination);
+
+    // 1) drawer "chunk": short filtered noise burst
+    const len = Math.floor(ac.sampleRate * 0.09);
+    const buf = ac.createBuffer(1, len, ac.sampleRate);
+    const data = buf.getChannelData(0);
+    for (let i = 0; i < len; i++) data[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3);
+    const noise = ac.createBufferSource();
+    noise.buffer = buf;
+    const bp = ac.createBiquadFilter();
+    bp.type = 'bandpass'; bp.frequency.value = 900; bp.Q.value = 0.8;
+    noise.connect(bp); bp.connect(out);
+    noise.start(t0);
+
+    // 2) two bright bell "chings"
+    const bell = (start, base) => {
+      [1, 2.76, 5.4].forEach((mult, i) => {
+        const o = ac.createOscillator(), g = ac.createGain();
+        o.type = 'sine';
+        o.frequency.value = base * mult;
+        const peak = [0.35, 0.16, 0.07][i];
+        g.gain.setValueAtTime(0.0001, start);
+        g.gain.exponentialRampToValueAtTime(peak, start + 0.006);
+        g.gain.exponentialRampToValueAtTime(0.0001, start + 0.9 - i * 0.2);
+        o.connect(g); g.connect(out);
+        o.start(start); o.stop(start + 1);
+      });
+    };
+    bell(t0 + 0.07, 1568);   // G6
+    bell(t0 + 0.17, 2093);   // C7
+  } catch (e) { /* sound is optional */ }
+}
+
 function coinRain() {
   const box = $('#coinRain');
   const items = ['🪙', '💵', '💸', '🪙', '💰'];
@@ -968,6 +1157,7 @@ function render() {
   if (ui.view === 'history') renderHistory();
   if (ui.view === 'stats') renderStats();
   if (ui.view === 'more') renderMore();
+  if (ui.view === 'quick') renderQuick();
 }
 
 function setWho(id) {
@@ -1047,7 +1237,7 @@ function bind() {
 }
 
 /* ---------------- START ---------------- */
-$('#marquee').textContent = '★ FULUS BOX ★ MADE IN ALEXANDRIA ★ BAHARY VIBES ONLY ★ EVERY POUND HAS A STORY ★ MARMORA APPROVED ★ MOHAMED SURVIVED ★ ';
+$('#marquee').textContent = '★ FLOOWS BOX ★ MADE IN ALEXANDRIA ★ BAHARY VIBES ONLY ★ EVERY POUND HAS A STORY ★ MARMORA IS ALWAYS RIGHT ★ TEAM MARMORA 👑 ★ ';
 bind();
 if (who) setWhoQuiet(); else showWelcome();
 
