@@ -1,0 +1,15 @@
+{
+  "name": "Fulus Box",
+  "short_name": "Fulus Box",
+  "description": "Mohamed & Marmora's retro money diary",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#C8102E",
+  "theme_color": "#8E0B1E",
+  "icons": [
+    { "src": "assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
