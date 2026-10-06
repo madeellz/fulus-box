@@ -10,6 +10,7 @@ const PEOPLE = {
   mohamed: { id: 'mohamed', name: 'Mohamed', emoji: '🧔🏻‍♂️', title: 'El Basha', color: '#1F8A8A' },
   marwa:   { id: 'marwa',   name: 'Marmora', emoji: '👸🏻',   title: 'El Hanem', color: '#C8102E' }
 };
+const APP_VERSION = '1.3';           // also bump ?v= in index.html when you upload changes
 const START_YM = '2026-10';           // first month you can record
 const CURRENCY = 'EGP';
 const BIG_SPEND = 2000;               // amount that triggers the "sit down" toast
@@ -903,6 +904,7 @@ function renderMore() {
     <div class="card joke-card">
       <span class="joke-tag">FINE PRINT</span>
       <p style="margin:0">No financial advice here — only Egyptian wisdom and marital comedy. Marmora reserves the right to call any purchase “an investment”. 🙂</p>
+      <p class="pixel" style="margin:10px 0 0">FLOOWS BOX V${APP_VERSION}</p>
     </div>`;
 
   $('#moreMonth').onchange = ev => { m.ym = ev.target.value; renderMore(); };

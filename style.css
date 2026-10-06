@@ -54,7 +54,8 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-button { font: inherit; color: inherit; cursor: pointer; }
+/* iPhone Safari gives buttons a grey box by default — remove it everywhere */
+button { font: inherit; color: inherit; cursor: pointer; -webkit-appearance: none; appearance: none; border-radius: 0; }
 input, select, textarea { font: inherit; font-size: 16px; /* stops iOS zoom */ color: var(--ink); }
 [hidden] { display: none !important; }
 svg { display: block; }
@@ -270,7 +271,7 @@ svg { display: block; }
 }
 .topbar-logo {
   display: flex; align-items: baseline; gap: 6px; color: var(--cream);
-  border: 0; background: transparent; padding: 4px 6px 4px 0; margin: 0;
+  border: 0; background: transparent !important; box-shadow: none; padding: 4px 6px 4px 0; margin: 0;
 }
 .topbar-logo:active { transform: scale(.96); }
 .tb-script { font-family: var(--f-script); font-size: 26px; text-shadow: 2px 2px 0 var(--ink); }
